@@ -67,6 +67,37 @@ a:focus {
     padding-top: 10px;
 }
 
+.whatsapp-float {
+    position: fixed;
+    background: #25D366;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1;
+    font-size: 30px;
+    right: 15px;
+    bottom: 70px;
+    transition: all 0.3s;
+    z-index: 9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float:hover {
+    background: #20BA5A;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float i {
+    padding-top: 0;
+}
+
 .btn {
     transition: .3s;
 }
@@ -82,7 +113,7 @@ a:focus {
 }
 
 .top-bar .logo {
-    padding: 15px 0;
+    padding: 18px 0;
     text-align: left;
     overflow: hidden;
 }
@@ -96,8 +127,8 @@ a:focus {
 }
 
 .top-bar .logo img {
-    max-width: 100%;
-    max-height: 60px;
+    max-width: 300%;
+    max-height: 65px;
 }
 
 .top-bar .top-bar-item {
@@ -2048,6 +2079,38 @@ a:focus {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+
+/*******************************/
+/********** Map CSS ************/
+/*******************************/
+.map {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+    background: #f5f5f5;
+}
+
+.map .map-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.map .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 767.98px) {
+    .map .map-container {
+        height: 400px;
+    }
 }
 
 
