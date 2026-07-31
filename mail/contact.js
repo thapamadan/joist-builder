@@ -11,11 +11,11 @@ $(function () {
             var subject = $("input#subject").val();
             var message = $("textarea#message").val();
 
-            $this = $("#sendMessageButton");
+            var $this = $("#sendMessageButton");
             $this.prop("disabled", true);
 
             $.ajax({
-                url: "contact.php",
+                url: "mail/contact.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -40,7 +40,6 @@ $(function () {
                             .append("</button>");
                     $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ", it seems that our mail server is not responding. Please try again later!"));
                     $('#success > .alert-danger').append('</div>');
-                    $('#contactForm').trigger("reset");
                 },
                 complete: function () {
                     setTimeout(function () {
