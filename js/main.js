@@ -42,10 +42,12 @@
     
     
     // jQuery counterUp
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
+    if ($.fn.counterUp) {
+        $('[data-toggle="counter-up"]').counterUp({
+            delay: 10,
+            time: 2000
+        });
+    }
     
     
     // Modal Video
@@ -65,6 +67,7 @@
 
 
     // Testimonial Slider
+    if ($.fn.slick) {
     $('.testimonial-slider').slick({
         infinite: true,
         autoplay: true,
@@ -84,9 +87,11 @@
         asNavFor: '.testimonial-slider'
     });
     $('.testimonial .slider-nav').css({"position": "relative", "height": "160px"});
+    }
     
     
     // Blogs carousel
+    if ($.fn.owlCarousel) {
     $(".related-slider").owlCarousel({
         autoplay: true,
         dots: false,
@@ -108,9 +113,11 @@
             }
         }
     });
+    }
     
     
     // Portfolio isotope and filter
+    if ($.fn.isotope) {
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
@@ -126,6 +133,7 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
+    }
 
     var $heroCarousel = $('#carousel.hero-carousel');
     var heroVideos = Array.prototype.slice.call(document.querySelectorAll('#carousel.hero-carousel video'));
@@ -160,14 +168,13 @@
         });
     }
 
-    // Keep the hero moving unless the user has requested reduced motion.
-    if (!reduceMotion) {
-        $heroCarousel.carousel({
-            interval: 5200,
-            pause: false,
-            ride: 'carousel'
-        });
-    }
+    // Hover must NOT pause the hero: it fills the viewport, so the pointer sits
+    // over it most of the time and the first slide would loop forever.
+    $heroCarousel.carousel({
+        interval: 5200,
+        pause: false,
+        ride: reduceMotion ? false : 'carousel'
+    });
 
     $heroCarousel.on('slid.bs.carousel', function (event) {
         var current = String(event.to + 1).padStart(2, '0');
@@ -183,50 +190,7 @@ document.querySelectorAll('.footer-year').forEach(function (el) {
     el.textContent = new Date().getFullYear();
 });
 
-// Project labels stay available on tap while retaining hover on pointer devices.
-(function () {
-    var tiles = Array.prototype.slice.call(document.querySelectorAll('.project-tile'));
-    var filters = Array.prototype.slice.call(document.querySelectorAll('[data-project-filter]'));
-
-    function selectTile(tile) {
-        tiles.forEach(function (item) {
-            var selected = item === tile && !item.classList.contains('is-active');
-            item.classList.toggle('is-active', selected);
-            item.setAttribute('aria-pressed', selected ? 'true' : 'false');
-        });
-    }
-
-    tiles.forEach(function (tile) {
-        tile.addEventListener('click', function () {
-            selectTile(tile);
-        });
-        tile.addEventListener('keydown', function (event) {
-            if (event.key === 'Enter' || event.key === ' ') {
-                event.preventDefault();
-                selectTile(tile);
-            }
-        });
-    });
-
-    filters.forEach(function (button) {
-        button.addEventListener('click', function () {
-            var filter = button.getAttribute('data-project-filter');
-
-            filters.forEach(function (item) {
-                var selected = item === button;
-                item.classList.toggle('is-active', selected);
-                item.setAttribute('aria-pressed', selected ? 'true' : 'false');
-            });
-
-            tiles.forEach(function (tile) {
-                var visible = filter === 'all' || tile.getAttribute('data-project-status') === filter;
-                tile.hidden = !visible;
-                tile.classList.remove('is-active');
-                tile.setAttribute('aria-pressed', 'false');
-            });
-        });
-    });
-}());
+// Projects index behaviour (filtering, justified layout, viewer) lives in js/projects.js.
 
 // Interactive values statement on the About page.
 (function () {

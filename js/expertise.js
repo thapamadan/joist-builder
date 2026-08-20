@@ -16,7 +16,7 @@
             id: "renovation-remodeling",
             title: "Renovation & Remodeling",
             shortTitle: "Renovation",
-            image: "img/rennovation.png",
+            image: "img/rennovation.jpg",
             alt: "Renovation and remodeling work",
             summary: "Existing spaces reworked around structure, comfort, function and realistic budgets.",
             description: "We give existing buildings a useful next chapter. Our team assesses current conditions, identifies practical structural and spatial improvements, and coordinates repair, extension, remodeling and finishes while respecting the character and constraints of the original space."
@@ -43,7 +43,7 @@
             id: "structural-estimation",
             title: "Structural & Estimation",
             shortTitle: "Engineering",
-            image: "img/estimation.png",
+            image: "img/estimation.jpg",
             alt: "Structural engineering assessment",
             summary: "Safe structural decisions, practical detailing and cost guidance for confident planning.",
             description: "Sound engineering makes confident decisions possible. We provide structural analysis, practical detailing, quantity and cost estimation, and valuation support so design ambitions remain safe, efficient and financially grounded from the earliest planning stage."
@@ -65,7 +65,8 @@
 
     function renderHomeCards(container) {
         container.innerHTML = expertise.map(function (item, index) {
-            return '<a class="expertise-card" href="service.html#' + item.id + '">' +
+            return '<a class="expertise-card expertise-card--' + item.id + '" href="service.html#' + item.id + '">' +
+                '<span class="media-fill" aria-hidden="true" style="background-image: url(' + item.image + ')"></span>' +
                 '<img loading="lazy" src="' + item.image + '" alt="' + item.alt + '">' +
                 '<span class="expertise-card-number">' + twoDigits(index) + '</span>' +
                 '<div class="expertise-card-copy"><h3>' + item.title + '</h3><div><p>' + item.summary + '</p>' +
@@ -77,7 +78,9 @@
     function renderExpertiseSections(container) {
         container.innerHTML = expertise.map(function (item, index) {
             return '<article class="expertise-detail" id="' + item.id + '">' +
-                '<div class="expertise-detail-media"><img loading="lazy" src="' + item.image + '" alt="' + item.alt + '"></div>' +
+                '<div class="expertise-detail-media">' +
+                '<span class="media-fill" aria-hidden="true" style="background-image: url(' + item.image + ')"></span>' +
+                '<img loading="lazy" src="' + item.image + '" alt="' + item.alt + '"></div>' +
                 '<div class="expertise-detail-copy"><span class="expertise-detail-number">' + twoDigits(index) + ' / 06</span>' +
                 '<h2>' + item.title + '</h2><p>' + item.description + '</p>' +
                 '<a href="contact.html">Discuss your project <i class="fa fa-chevron-right" aria-hidden="true"></i></a></div>' +

@@ -55,13 +55,18 @@ a:hover,
 a:active,
 a:focus {
     color: var(--accent-deep);
-    outline: none;
     text-decoration: none;
 }
 
+/* Mouse users get no ring; keyboard users always do. */
+a:focus:not(:focus-visible) {
+    outline: none;
+}
+
 :focus-visible {
-    outline: 3px solid var(--accent);
+    outline: 3px solid #111820;
     outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(253, 190, 51, .85);
 }
 
 img {
@@ -671,6 +676,7 @@ img {
     z-index: 1;
 }
 
+.page-header h1,
 .page-header h2 {
     position: relative;
     color: #ffffff;
@@ -680,6 +686,7 @@ img {
     padding-bottom: 0;
 }
 
+.page-header h1::after,
 .page-header h2::after {
     display: none;
 }
@@ -716,6 +723,7 @@ img {
         padding: 46px 0;
     }
     
+    .page-header h1,
     .page-header h2 {
         font-size: 34px;
     }
@@ -730,6 +738,7 @@ img {
         padding: 38px 0;
     }
     
+    .page-header h1,
     .page-header h2 {
         font-size: 35px;
     }
