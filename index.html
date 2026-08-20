@@ -8,7 +8,9 @@
         <meta content="Joist Engineering & Construction Pvt. Ltd. provides construction, architectural design, 3D visualization, renovation, surveying, estimation, and structural services in Nepal." name="description">
 
         <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon" sizes="any">
         <link href="img/logo.PNG" rel="icon" type="image/png">
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
         <!-- Preconnect for faster loading -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +25,10 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css?v=20260730-email2" rel="stylesheet">
-        <link href="css/redesign.css?v=20260731-control-states1" rel="stylesheet">
+        <link href="css/style.css?v=20260820-launch1" rel="stylesheet">
+        <link href="css/redesign.css?v=20260820-launch1" rel="stylesheet">
     </head>
 
     <body class="home-page">
@@ -69,8 +66,8 @@
                     <div class="site-menu-social" aria-label="Social links">
                         <h2>Connect</h2>
                         <div>
-                            <a href="https://www.facebook.com/share/1AC6xXLoQF/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/joistengineeringandconstruction" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/joistengineeringconstruction?igsh=eHgzeDZpbndxaWt6&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                             <a href="https://wa.me/9779856083243" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                         </div>
                     </div>
@@ -83,7 +80,7 @@
 
 
             <!-- Carousel Start -->
-            <div id="carousel" class="carousel slide carousel-fade hero-carousel" data-ride="carousel" data-interval="4000" data-pause="false" data-touch="true">
+            <div id="carousel" class="carousel slide carousel-fade hero-carousel" data-pause="false" data-touch="true">
                 <ol class="carousel-indicators" aria-label="Featured messages">
                     <li data-target="#carousel" data-slide-to="0" class="active" aria-label="Slide 1"></li>
                     <li data-target="#carousel" data-slide-to="1" aria-label="Slide 2"></li>
@@ -91,7 +88,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <video muted loop playsinline preload="auto" aria-label="Joist Engineering featured construction project video">
+                        <video muted loop playsinline preload="auto" poster="img/video11-poster.jpg" aria-hidden="true">
                             <source src="img/video11.mp4" type="video/mp4">
                         </video>
                         <div class="carousel-caption">
@@ -101,7 +98,7 @@
                     </div>
 
                     <div class="carousel-item">
-                        <video muted loop playsinline preload="auto" aria-label="Joist Engineering construction project video">
+                        <video muted loop playsinline preload="none" poster="img/video1-poster.jpg" aria-hidden="true">
                             <source src="img/video1.mp4" type="video/mp4">
                         </video>
                         <div class="carousel-caption">
@@ -111,7 +108,7 @@
                     </div>
 
                     <div class="carousel-item">
-                        <video muted loop playsinline preload="auto" aria-label="Joist Engineering architectural project video">
+                        <video muted loop playsinline preload="none" poster="img/video111-poster.jpg" aria-hidden="true">
                             <source src="img/video111.mp4" type="video/mp4">
                         </video>
                         <div class="carousel-caption">
@@ -273,25 +270,26 @@
                             <h3>Crafting the future,<br>honoring every detail</h3>
                             <p>Our portfolio reflects practical engineering, thoughtful design and careful execution across construction, architecture and interiors.</p>
                             <div class="project-preview-filters" aria-label="Project categories">
-                                <a href="projects.html">Ongoing Projects <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                                <a href="projects.html">Completed Projects <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                <a href="projects.html#ongoing">Ongoing Projects <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                <a href="projects.html#completed">Completed Projects <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-preview-grid">
                         <a class="project-story project-story-featured" href="projects.html">
                             <span class="project-story-media">
-                                <img loading="lazy" src="img/residental1.png" alt="NB Bhawan residential and commercial design concept" decoding="async">
+                                <span class="media-fill" aria-hidden="true" style="background-image: url(img/residental1.jpg)"></span>
+                                <img loading="lazy" src="img/residental1.jpg" alt="NB Bhawan residential and commercial design concept" decoding="async">
                                 <span class="project-story-hover"><strong>Residential Build</strong><small>Project Type: Residential &amp; Commercial</small></span>
                             </span>
                             <span class="project-story-copy"><strong>Residential Build</strong><span class="project-story-meta"><small>Project Type: Residential &amp; Commercial</small></span></span>
                         </a>
                         <a class="project-story" href="projects.html">
-                            <span class="project-story-media"><img loading="lazy" src="img/3d-design.jpeg" alt="Architectural design concept under development"><span class="project-story-hover"><strong>3D Design Concept</strong><small>Architecture &middot; Design &amp; Visualization</small></span></span>
+                            <span class="project-story-media"><span class="media-fill" aria-hidden="true" style="background-image: url(img/3d-design.jpeg)"></span><img loading="lazy" src="img/3d-design.jpeg" alt="Architectural design concept under development"><span class="project-story-hover"><strong>3D Design Concept</strong><small>Architecture &middot; Design &amp; Visualization</small></span></span>
                             <span class="project-story-copy"><strong>3D Design Concept</strong><small>Architecture <b>&middot;</b> Design &amp; visualization</small></span>
                         </a>
                         <a class="project-story" href="projects.html">
-                            <span class="project-story-media"><img loading="lazy" src="img/interior-design.jpeg" alt="Refined modern interior project"><span class="project-story-hover"><strong>Interior Planning</strong><small>Interior &middot; Materials &amp; Space Planning</small></span></span>
+                            <span class="project-story-media"><span class="media-fill" aria-hidden="true" style="background-image: url(img/interior-design.jpeg)"></span><img loading="lazy" src="img/interior-design.jpeg" alt="Refined modern interior project"><span class="project-story-hover"><strong>Interior Planning</strong><small>Interior &middot; Materials &amp; Space Planning</small></span></span>
                             <span class="project-story-copy"><strong>Interior Planning</strong><small>Interior <b>&middot;</b> Materials &amp; space planning</small></span>
                         </a>
                     </div>
@@ -304,9 +302,8 @@
             <!-- FAQs Start -->
             <div class="faqs">
                 <div class="container">
-                    <div class="section-header text-center">
-                        <!-- <p>Frequently Asked Question</p> -->
-                        <h2>Frequently Asked Question</h2>
+                    <div class="faqs-header">
+                        <h2>Frequently Asked Questions</h2>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -465,9 +462,9 @@
                                 <h3 class="footer-brand">Joist Engineering <span>&amp; Construction Pvt. Ltd.</span></h3>
                                 <p>From first survey to final handover — we design, build, and renovate spaces that stand the test of time, for clients in Nepal and worldwide.</p>
                                 <div class="footer-social">
-                                    <a href="https://www.facebook.com/share/1AC6xXLoQF/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="https://wa.me/9779856083243" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="https://www.facebook.com/joistengineeringandconstruction" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                    <a href="https://www.instagram.com/joistengineeringconstruction?igsh=eHgzeDZpbndxaWt6&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="https://wa.me/9779856083243" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -485,12 +482,12 @@
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-link">
                                 <h2>Solutions</h2>
-                                <a href="service.html">Construction Works</a>
-                                <a href="service.html">Structural Analysis</a>
-                                <a href="service.html">Valuation &amp; Estimation</a>
-                                <a href="service.html">Renovation &amp; Remodeling</a>
-                                <a href="service.html">Architecture &amp; Interior</a>
-                                <a href="service.html">Surveying</a>
+                                <a href="service.html#construction-works">Construction Works</a>
+                                <a href="service.html#structural-estimation">Structural Analysis</a>
+                                <a href="service.html#structural-estimation">Valuation &amp; Estimation</a>
+                                <a href="service.html#renovation-remodeling">Renovation &amp; Remodeling</a>
+                                <a href="service.html#architectural-design">Architecture &amp; Interior</a>
+                                <a href="service.html#surveying">Surveying</a>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-3">
@@ -519,26 +516,21 @@
             </div>
             <!-- Footer End -->
 
-            <a href="https://wa.me/9779856083243" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
-                <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/9779856083243" target="_blank" class="whatsapp-float" rel="noopener" aria-label="Chat with us on WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
             </a>
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+            <a href="#" class="back-to-top" aria-label="Back to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
         </div>
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
 
         <!-- Template Javascript -->
-        <script src="js/expertise.js?v=20260731-images2"></script>
-        <script src="js/main.js?v=20260730-hero-playback1"></script>
+        <script src="js/expertise.js?v=20260820-launch1"></script>
+        <script src="js/main.js?v=20260820-launch1"></script>
     </body>
 </html>
